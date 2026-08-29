@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /app
 COPY . .
-RUN dotnet publish "TecnoGasHogar/TecnoGasHogar.csproj" -c Release -o out
+RUN dotnet publish "TecnoGasHogar.csproj" -c Release -o out
 
 # Fase de ejecución
 FROM mcr.microsoft.com/dotnet/aspnet:10.0

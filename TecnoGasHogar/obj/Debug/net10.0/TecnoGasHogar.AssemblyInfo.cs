@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TecnoGasHogar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afe0422e25905ee742a204e7a11f5ff959698138")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5ebf22ba99b627e6e725f43a9e33725d2fa66e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("TecnoGasHogar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TecnoGasHogar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

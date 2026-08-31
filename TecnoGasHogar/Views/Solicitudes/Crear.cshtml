@@ -1,0 +1,66 @@
+@model TecnoGasHogar.Models.SolicitudServicio
+@{
+    ViewData["Title"] = "Registrar Solicitud";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h1 class="h5 mb-0">Registrar Solicitud de Servicio</h1>
+            </div>
+            <div class="card-body p-4">
+                <form asp-action="Crear">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Cliente" class="form-label"></label>
+                            <input asp-for="Cliente" class="form-control" placeholder="Nombre del cliente" />
+                            <span asp-validation-for="Cliente" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Telefono" class="form-label"></label>
+                            <input asp-for="Telefono" class="form-control" placeholder="Ej: 999 123 456" />
+                            <span asp-validation-for="Telefono" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Distrito" class="form-label"></label>
+                            <input asp-for="Distrito" class="form-control" placeholder="Distrito del cliente" />
+                            <span asp-validation-for="Distrito" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="TipoServicio" class="form-label"></label>
+                            <select asp-for="TipoServicio" class="form-select">
+                                <option value="">Seleccione...</option>
+                                <option value="Instalación">Instalación</option>
+                                <option value="Mantenimiento">Mantenimiento</option>
+                                <option value="Reparación">Reparación</option>
+                                <option value="Revisión">Revisión</option>
+                            </select>
+                            <span asp-validation-for="TipoServicio" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label asp-for="Descripcion" class="form-label"></label>
+                            <textarea asp-for="Descripcion" class="form-control" rows="3" placeholder="Detalle de la solicitud (opcional)"></textarea>
+                            <span asp-validation-for="Descripcion" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 border-top pt-3">
+                        <button type="submit" class="btn btn-primary px-4">Guardar</button>
+                        <a class="btn btn-outline-secondary px-4" asp-action="Index">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

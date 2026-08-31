@@ -1,8 +1,41 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="p-5 mb-4 text-white rounded-3 shadow-sm" style="background: linear-gradient(135deg, #0d6efd, #0dcaf0);">
+    <div class="container py-4">
+        <h1 class="display-4 fw-bold">TecnoGasHogar</h1>
+        <p class="lead mb-4">Sistema de gestión de solicitudes de servicio de gas para el hogar.</p>
+        <div class="d-flex gap-2 flex-wrap">
+            <a class="btn btn-light btn-lg" asp-controller="Solicitudes" asp-action="Crear">Registrar solicitud</a>
+            <a class="btn btn-outline-light btn-lg" asp-controller="Solicitudes" asp-action="Index">Ver solicitudes</a>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Registro rápido</h5>
+                <p class="card-text text-muted">Registra nuevas solicitudes de servicio capturando los datos del cliente, tipo de servicio y descripción.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Consulta fácil</h5>
+                <p class="card-text text-muted">Consulta todas las solicitudes registradas ordenadas por fecha en una sola tabla.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Control de servicios</h5>
+                <p class="card-text text-muted">Identifica de un vistazo el tipo de servicio de cada solicitud, desde instalación hasta reparación.</p>
+            </div>
+        </div>
+    </div>
 </div>
